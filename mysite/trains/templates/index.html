@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>RAPT</title>
+</head>
+<body>  
+    <header>
+        <p id="logo"><a href="#">RAPT</a></p>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Aléatoire</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>test</h1>
+    <div class="table">
+        <ul class ="num_train">
+            {% for train in train_list %}
+                <li>{{ forloop.counter }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="destination_train">
+            {% for train in train_list %}
+                <li>{{ train.destination }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="horaire_train">
+            {% for train in train_list %}
+                <li>{{ train.schedule|time:"H:i" }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="redirection_train">
+            {% for train in train_list %}
+                <li><a href="#">Voir</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

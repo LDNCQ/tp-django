@@ -1,0 +1,27 @@
+html {
+    background-color: grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: large;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.5px;
+}
+
+.table {
+    display: flex;
+}
+
+.table > * {
+    margin:0;
+}
+
+.table li {
+    padding: 10px 40px;
+    border: solid 1px black;
+}
