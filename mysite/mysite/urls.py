@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from trains.views import index
+from trains.views import index , detail_train, page_aleatoire
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('trains/', index, name='index'),
+    path('train/<int:train_id>/', detail_train, name='detail_train'),
+    path('page_aleatoire/', page_aleatoire, name='page_aleatoire'),
 ]

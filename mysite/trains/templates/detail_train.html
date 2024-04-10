@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>RAPT</title>
+</head>
+<body>  
+    <header class="flex">
+        <a href="{% url 'index' %}">RAPT</a>
+        <nav class="flex">
+            <a href="{% url 'index' %}" class="souslignage-gris-hover">Accueil</a>
+            <a href="{% url 'page_aleatoire' %}" class="souslignage-gris-hover">Aléatoire</a>
+            <input type="search" class="">
+        </nav>
+    </header>
+    <h1 class="titre text-center">Train n°{{train.id}}</h1>
+    <p class="dest text-center">Destination : {{train.destination}} - Départ à {{train.schedule|time:"H:i"}}</p>
+    <img src="{% static 'images/ligne-n.png' %}" alt="Image de la ligne" class="img-ligne">
+    <a href="{% url 'index' %}" class="souslignage-gris-hover">Revenir à l'accueil ></a>
+
+</body>
+</html>

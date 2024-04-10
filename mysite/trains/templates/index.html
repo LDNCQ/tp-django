@@ -8,20 +8,19 @@
     <title>RAPT</title>
 </head>
 <body>  
-    <header>
-        <p id="logo"><a href="#">RAPT</a></p>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Aléatoire</a></li>
-            </ul>
+    <header class="flex">
+        <a href="#">RAPT</a>
+        <nav class="flex">
+            <a href="#" class="souslignage-gris-hover">Accueil</a>
+            <a href="{% url 'page_aleatoire' %}" class="souslignage-gris-hover">Aléatoire</a>
+            <input type="search" class="">
         </nav>
     </header>
-    <h1>test</h1>
-    <div class="table">
+    <h1 class="titre text-center">Accueil</h1>
+    <div class="table flex">
         <ul class ="num_train">
             {% for train in train_list %}
-                <li>{{ forloop.counter }}</li>
+                <li>{{ train.id }}</li>
             {% endfor %}
         </ul>
         <ul class="destination_train">
@@ -36,7 +35,7 @@
         </ul>
         <ul class="redirection_train">
             {% for train in train_list %}
-                <li><a href="#">Voir</a></li>
+                <li><a href="{% url 'detail_train' train.id %}" class="souslignage-gris-hover">Voir</a></li>
             {% endfor %}
         </ul>
     </div>

@@ -1,27 +1,73 @@
 html {
-    background-color: grey;
+    background-color: #FFFFFF;
     font-family: "Open Sans", sans-serif;
-    font-size: large;
+    font-size: larger;
+    padding: 15px 300px;
 }
 
 a{
     text-decoration: none;
     color: black;
 }
-ul {
-    list-style-type: none;
-    padding-inline-start: 0.5px;
+
+.titre {
+    padding: 15px 0;
 }
 
-.table {
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.text-center {
+    text-align: center;
+} 
+
+.flex {
     display: flex;
 }
 
+.table {
+    justify-content: center;    
+}
 .table > * {
     margin:0;
 }
 
 .table li {
-    padding: 10px 40px;
+    padding: 10px 50px;
     border: solid 1px black;
+}
+
+header {
+    justify-content: space-between;
+}
+
+nav *{
+    margin: 0 10px;
+}
+
+.dest {
+    font-size: larger;
+}
+
+.img-ligne {
+
+    height: 400px;
+}
+
+.horaire_train, .destination_train {
+    background-color:dodgerblue ;
+}
+
+.redirection_train {
+    background-color: lightgreen;
+}
+
+.num_train {
+    background-color: grey;
+}
+
+.souslignage-gris-hover:hover {
+    text-decoration: underline grey;
 }
